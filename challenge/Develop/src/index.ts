@@ -1,8 +1,8 @@
 import Truck from "./classes/Truck.js";
-import Car from "./classes/Car.js";
+import { Car } from "./classes/Car"; 
 import Motorbike from "./classes/Motorbike.js";
 import Wheel from "./classes/Wheel.js";
-import Cli from "./classes/Cli.js";
+import { Cli } from "./classes/Cli";
 import inquirer from 'inquirer';
 
 const cli = new Cli();
@@ -22,6 +22,7 @@ cli.addVehicle(truck1);
 const motorbike1 = new Motorbike(
     '3J6DA01J8MS123456', 'black', 'Harley Davidson', 'Sportster', 2021, 300, 200, []
   );
+  
   
 cli.addVehicle(motorbike1);
 

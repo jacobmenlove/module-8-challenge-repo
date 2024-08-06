@@ -1,19 +1,10 @@
-
-import { Vehicle } from './Vehicle'; 
-
-import Wheel from './Wheel.js';
+import { Vehicle } from './Vehicle';
+import Wheel from './Wheel';
 import inquirer from 'inquirer';
 
-
 class Motorbike extends Vehicle {
-  override vin: string;
-override color: string;
-override make: string;
-override model: string;
-override year: number;
-override weight: number;
-override topSpeed: number;
- 
+  wheels: Wheel[]; // Declare the wheels property
+
   constructor(
     vin: string,
     color: string,
@@ -22,7 +13,7 @@ override topSpeed: number;
     year: number,
     weight: number,
     topSpeed: number,
-    wheels: Wheel[]
+    wheels: Wheel[] // Parameter for wheels
   ) {
     super(vin, color, make, model, year, weight, topSpeed);
     this.vin = vin;
@@ -32,14 +23,13 @@ override topSpeed: number;
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
+    // Initialize wheels property
     this.wheels = wheels.length !== 2 ? [new Wheel(), new Wheel()] : wheels;
   }
 
-  
   wheelie(): void {
     console.log(`${this.make} ${this.model} is performing a wheelie!`);
   }
-
 
   override printDetails(): void {
     super.printDetails();
@@ -50,11 +40,10 @@ override topSpeed: number;
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
-    this.wheels.forEach((wheel, index) => {
-      console.log(`Wheel ${index + 1}: ${wheel.getDiameter} inch with a ${wheel.getTireBrand} tire`);
+    this.wheels.forEach((wheel: Wheel, index: number) => { // Ensure 'wheel' and 'index' are typed
+      console.log(`Wheel ${index + 1}: ${wheel.toString()}`);
     });
   }
 }
 
 export default Motorbike;
-
