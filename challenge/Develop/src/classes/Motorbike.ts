@@ -2,7 +2,7 @@ import { Vehicle } from './Vehicle';
 import Wheel from './Wheel';
 import inquirer from 'inquirer';
 
-class motorbike extends Vehicle {
+class Motorbike extends Vehicle {
   wheels: Wheel[]; // Declare the wheels property
 
   constructor(
@@ -46,4 +46,4 @@ class motorbike extends Vehicle {
   }
 }
 
-export default motorbike;
+export default Motorbike;
