@@ -2,10 +2,10 @@
 import inquirer from 'inquirer';
 
 interface Driveable {
-  // declare the properties
+
   started: boolean;
   currentSpeed: number;
-  // declare the methods
+ 
   start(): void;
   accelerate(change: number): void;
   decelerate(change: number): void;
@@ -14,5 +14,5 @@ interface Driveable {
   reverse(): void;
 }
 
-// export the Driveable interface
+
 export default Driveable;

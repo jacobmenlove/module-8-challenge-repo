@@ -1,4 +1,4 @@
-// src/vehicle.ts
+
 
 export class Vehicle {
   vin: string;

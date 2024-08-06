@@ -1,4 +1,4 @@
-// src/cli.ts
+
 import inquirer from 'inquirer';
 import { Car, Truck, Motorbike } from './vehicle';
 

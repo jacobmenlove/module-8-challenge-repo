@@ -18,6 +18,6 @@ class Wheel {
   }
 }
 
-// Export the Wheel class as the default export
+
 export default Wheel;
 

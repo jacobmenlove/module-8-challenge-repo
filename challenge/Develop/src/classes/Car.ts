@@ -1,58 +1,26 @@
-// Importing Vehicle and Wheel classes
+
 import Vehicle from './Vehicle.js';
 import Wheel from './Wheel.js';
 import inquirer from 'inquirer';
 
 
-// Car class that extends Vehicle class
-class Car extends Vehicle {
-  // Declare properties of the Car class
-  vin: string;
-  color: string;
-  make: string;
-  model: string;
-  year: number;
-  weight: number;
-  topSpeed: number;
-  wheels: Wheel[];
+export class Car extends Vehicle {
+    numDoors: number;
 
-  // Constructor for the Car class
-  constructor(
-    vin: string,
-    color: string,
-    make: string,
-    model: string,
-    year: number,
-    weight: number,
-    topSpeed: number,
-    wheels: Wheel[]
-  ) {
-    super();
-    this.vin = vin;
-    this.color = color;
-    this.make = make;
-    this.model = model;
-    this.year = year;
-    this.weight = weight;
-    this.topSpeed = topSpeed;
-    this.wheels = wheels.length !== 4 ? [new Wheel(), new Wheel(), new Wheel(), new Wheel()] : wheels;
-  }
+    constructor(vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number, numDoors: number) {
+        super(vin, color, make, model, year, weight, topSpeed);
+        this.numDoors = numDoors;
+    }
 
-  // Override the printDetails method from the Vehicle class
-  override printDetails(): void {
-    super.printDetails();
-    console.log(`VIN: ${this.vin}`);
-    console.log(`Color: ${this.color}`);
-    console.log(`Make: ${this.make}`);
-    console.log(`Model: ${this.model}`);
-    console.log(`Year: ${this.year}`);
-    console.log(`Weight: ${this.weight} lbs`);
-    console.log(`Top Speed: ${this.topSpeed} mph`);
-    this.wheels.forEach((wheel, index) => {
-      console.log(`Wheel ${index + 1}: ${wheel.getDiameter} inch with a ${wheel.getTireBrand} tire`);
-    });
-  }
+    printDetails() {
+        super.printDetails();
+        console.log(`Number of Doors: ${this.numDoors}`);
+    }
+
+    start() { console.log('Car started.'); }
+    accelerate(amount: number) { console.log(`Car accelerated by ${amount} km/h.`); }
+    decelerate(amount: number) { console.log(`Car decelerated by ${amount} km/h.`); }
+    stop() { console.log('Car stopped.'); }
+    turn(direction: string) { console.log(`Car turned ${direction}.`); }
+    reverse() { console.log('Car is reversing.'); }
 }
-
-// Export the Car class as the default export
-export default Car;
