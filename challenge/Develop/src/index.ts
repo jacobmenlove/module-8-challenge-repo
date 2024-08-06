@@ -7,24 +7,47 @@ import inquirer from 'inquirer';
 
 const vehicles = [];
 
+const cli = new Cli();
+
 const car1 = new Car(
-  Cli.generateVin(),
-  'blue',
-  'Toyota',
-  'Camry',
-  2021,
-  3000,
-  130,
-  []
+  '1HGBH41JXMN109186', 
+  'red',                
+  'Toyota',           
+  'Corolla',           
+  2022,               
+  1500,               
+  180,                  
+  4                    
 );
 
+cli.addVehicle(car1);
 
-const truck1 = new Truck(Cli.generateVin(),"red", "Ford", "F-150", 2021, 5000, 120, [], 10000);
+const truck1 = new Truck(
+  '2FTRX18L41CA12345', 
+  'blue',              
+  'Ford',             
+  'F-150',             
+  2021,                
+  3000,                
+  160,                 
+  10000                
+);
+
+cli.addVehicle(truck1);
+
 const motorbike1Wheels = [new Wheel(17, "Michelin"), new Wheel(17, "Michelin")];
-const motorbike1 = new Motorbike(Cli.generateVin(), "black", "Harley Davidson", "Sportster", 2021, 500, 125, motorbike1Wheels);
+const motorbike1 = new Motorbike(
+  '3J6DA01J8MS123456', 
+  'black',             
+  'Harley Davidson',   
+  'Sportster',         
+  2021,              
+  300,               
+  200,                
+  2                   
+);
 
-vehicles.push(car1);
+cli.addVehicle(motorbike1);
 
-const cli = new Cli(vehicles);
 
-cli.startCli();
+cli.selectVehicle();
