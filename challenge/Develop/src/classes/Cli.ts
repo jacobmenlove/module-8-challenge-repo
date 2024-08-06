@@ -1,6 +1,6 @@
 
 import inquirer from 'inquirer';
-import { Car, Truck, Motorbike } from './vehicle';
+import { Car, Truck, Motorbike } from './Vehicle';
 
 export class Cli {
     private vehicles: (Car | Truck | Motorbike)[] = [];

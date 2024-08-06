@@ -54,7 +54,7 @@ export class Truck extends Vehicle implements AbleToTow {
   }
 
   
-  printDetails(): void {
+  override printDetails(): void {
     super.printDetails();
     console.log(`Towing Capacity: ${this.towingCapacity}`);
     console.log(`Wheels: ${this.wheels.length}`); 

@@ -6,15 +6,13 @@ import inquirer from 'inquirer';
 
 
 class Motorbike extends Vehicle {
-  vin: string;
-  color: string;
-  make: string;
-  model: string;
-  year: number;
-  weight: number;
-  topSpeed: number;
-  wheels: Wheel[];
-
+  override vin: string;
+override color: string;
+override make: string;
+override model: string;
+override year: number;
+override weight: number;
+override topSpeed: number;
  
   constructor(
     vin: string,
@@ -26,7 +24,7 @@ class Motorbike extends Vehicle {
     topSpeed: number,
     wheels: Wheel[]
   ) {
-    super();
+    super(vin, color, make, model, year, weight, topSpeed);
     this.vin = vin;
     this.color = color;
     this.make = make;

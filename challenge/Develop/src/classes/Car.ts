@@ -13,7 +13,7 @@ export class Car extends Vehicle {
         this.numDoors = numDoors;
     }
 
-    printDetails() {
+    override printDetails(): void {
         super.printDetails();
         console.log(`Number of Doors: ${this.numDoors}`);
     }
