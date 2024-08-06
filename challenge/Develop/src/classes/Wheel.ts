@@ -1,4 +1,5 @@
-// Define the Wheel class
+import inquirer from 'inquirer';
+
 class Wheel {
   private diameter: number;
   private tireBrand: string;
