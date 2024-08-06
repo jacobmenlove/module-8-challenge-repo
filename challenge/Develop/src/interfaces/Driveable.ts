@@ -1,4 +1,6 @@
-// definition of the Driveable interface
+
+import inquirer from 'inquirer';
+
 interface Driveable {
   // declare the properties
   started: boolean;

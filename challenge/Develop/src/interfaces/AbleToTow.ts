@@ -1,4 +1,5 @@
-// Define the AbleToTow interface
+import inquirer from 'inquirer';
+
 interface AbleToTow {
     tow(vehicle: Car | Motorbike): void;
   }
