@@ -1,5 +1,3 @@
-
-
 export class Vehicle {
   vin: string;
   color: string;
