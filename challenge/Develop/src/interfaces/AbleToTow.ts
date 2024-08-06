@@ -1,9 +1,9 @@
-import inquirer from 'inquirer';
+import { Car } from '../classes/Car'; 
+import Motorbike from "../classes/Motorbike"
 
-interface AbleToTow {
-    tow(vehicle: Car | Motorbike): void;
-  }
-  
+export interface AbleToTow {
+  tow(vehicle: Car | Motorbike): void;
+}
  
   export default AbleToTow;
   

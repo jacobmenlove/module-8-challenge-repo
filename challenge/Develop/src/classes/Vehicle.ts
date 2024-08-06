@@ -38,7 +38,7 @@ export class Car extends Vehicle {
       this.numDoors = numDoors;
   }
 
-  printDetails() {
+  override printDetails() {
       super.printDetails();
       console.log(`Number of Doors: ${this.numDoors}`);
   }
@@ -59,7 +59,7 @@ export class Truck extends Vehicle {
       this.towingCapacity = towingCapacity;
   }
 
-  printDetails() {
+  override printDetails() {
       super.printDetails();
       console.log(`Towing Capacity: ${this.towingCapacity}`);
   }
@@ -80,7 +80,7 @@ export class Motorbike extends Vehicle {
       this.numWheels = numWheels;
   }
 
-  printDetails() {
+  override printDetails() {
       super.printDetails();
       console.log(`Number of Wheels: ${this.numWheels}`);
   }

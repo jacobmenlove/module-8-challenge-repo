@@ -1,7 +1,8 @@
 
-import  Vehicle  from './Vehicle'; 
+import { Vehicle } from './Vehicle'; 
+import { Car } from './Car'; 
+
 import  Motorbike  from './Motorbike';  
-import  Car  from './Car'; 
 import  Wheel  from './Wheel'; 
 import AbleToTow  from '../interfaces/AbleToTow'; 
 

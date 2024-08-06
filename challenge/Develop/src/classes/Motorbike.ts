@@ -1,5 +1,6 @@
 
-import Vehicle from './Vehicle.js';
+import { Vehicle } from './Vehicle'; 
+
 import Wheel from './Wheel.js';
 import inquirer from 'inquirer';
 
