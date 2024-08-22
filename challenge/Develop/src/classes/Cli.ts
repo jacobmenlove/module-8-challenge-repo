@@ -1,16 +1,13 @@
-
-import truck from './Truck';
-import motorbike from './Motorbike';
-
+import Truck from './Truck.js';
+import Motorbike from './Motorbike.js';
+import Car from './Car.js'; 
 import inquirer from 'inquirer';
-import { Car, Truck, Motorbike } from './Vehicle';
-
 
 export class Cli {
-    private vehicles: (Car | Truck | Motorbike)[] = [];
+    private vehicles: (Truck | Car | Motorbike)[] = [];
     private selectedVehicleVin: string | null = null;
   
-    public addVehicle(vehicle: Car | Truck | Motorbike) {
+    public addVehicle(vehicle: Truck | Car | Motorbike) {
       this.vehicles.push(vehicle);
     }
   
@@ -97,3 +94,5 @@ export class Cli {
       this.selectVehicle();
     }
   }
+
+  export default Cli; 

@@ -28,66 +28,60 @@ export class Vehicle {
   }
 }
 
-export class Car extends Vehicle {
-  numDoors: number;
+export default Vehicle;
 
-  constructor(vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number, numDoors: number) {
-      super(vin, color, make, model, year, weight, topSpeed);
-      this.numDoors = numDoors;
-  }
+// export class Car extends Vehicle {
+//   numDoors: number;
 
-  override printDetails() {
-      super.printDetails();
-      console.log(`Number of Doors: ${this.numDoors}`);
-  }
+//   constructor(vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number, numDoors: number) {
+//       super(vin, color, make, model, year, weight, topSpeed);
+//       this.numDoors = numDoors;
+//   }
 
-  start() { console.log('Car started.'); }
-  accelerate(amount: number) { console.log(`Car accelerated by ${amount} km/h.`); }
-  decelerate(amount: number) { console.log(`Car decelerated by ${amount} km/h.`); }
-  stop() { console.log('Car stopped.'); }
-  turn(direction: string) { console.log(`Car turned ${direction}.`); }
-  reverse() { console.log('Car is reversing.'); }
-}
+//   override printDetails() {
+//       super.printDetails();
+//       console.log(`Number of Doors: ${this.numDoors}`);
+//   }
 
-export class Truck extends Vehicle {
-  towingCapacity: number;
+//   start() { console.log('Car started.'); }
+//   accelerate(amount: number) { console.log(`Car accelerated by ${amount} km/h.`); }
+//   decelerate(amount: number) { console.log(`Car decelerated by ${amount} km/h.`); }
+//   stop() { console.log('Car stopped.'); }
+//   turn(direction: string) { console.log(`Car turned ${direction}.`); }
+//   reverse() { console.log('Car is reversing.'); }
+// }
 
-  constructor(vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number, towingCapacity: number) {
-      super(vin, color, make, model, year, weight, topSpeed);
-      this.towingCapacity = towingCapacity;
-  }
+// export class Truck extends Vehicle {
+//   towingCapacity: number;
 
-  override printDetails() {
-      super.printDetails();
-      console.log(`Towing Capacity: ${this.towingCapacity}`);
-  }
+//   constructor(vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number, towingCapacity: number) {
+//       super(vin, color, make, model, year, weight, topSpeed);
+//       this.towingCapacity = towingCapacity;
+//   }
 
-  start() { console.log('Truck started.'); }
-  accelerate(amount: number) { console.log(`Truck accelerated by ${amount} km/h.`); }
-  decelerate(amount: number) { console.log(`Truck decelerated by ${amount} km/h.`); }
-  stop() { console.log('Truck stopped.'); }
-  turn(direction: string) { console.log(`Truck turned ${direction}.`); }
-  reverse() { console.log('Truck is reversing.'); }
-}
+//   override printDetails() {
+//       super.printDetails();
+//       console.log(`Towing Capacity: ${this.towingCapacity}`);
+//   }
 
-export class Motorbike extends Vehicle {
-  numWheels: number;
+//   start() { console.log('Truck started.'); }
+//   accelerate(amount: number) { console.log(`Truck accelerated by ${amount} km/h.`); }
+//   decelerate(amount: number) { console.log(`Truck decelerated by ${amount} km/h.`); }
+//   stop() { console.log('Truck stopped.'); }
+//   turn(direction: string) { console.log(`Truck turned ${direction}.`); }
+//   reverse() { console.log('Truck is reversing.'); }
+// }
 
-  constructor(vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number, numWheels: number) {
-      super(vin, color, make, model, year, weight, topSpeed);
-      this.numWheels = numWheels;
-  }
+// export class Motorbike extends Vehicle {
+//   numWheels: number;
 
-  override printDetails() {
-      super.printDetails();
-      console.log(`Number of Wheels: ${this.numWheels}`);
-  }
+//   constructor(vin: string, color: string, make: string, model: string, year: number, weight: number, topSpeed: number, numWheels: number) {
+//       super(vin, color, make, model, year, weight, topSpeed);
+//       this.numWheels = numWheels;
+//   }
 
-  start() { console.log('Motorbike started.'); }
-  accelerate(amount: number) { console.log(`Motorbike accelerated by ${amount} km/h.`); }
-  decelerate(amount: number) { console.log(`Motorbike decelerated by ${amount} km/h.`); }
-  stop() { console.log('Motorbike stopped.'); }
-  turn(direction: string) { console.log(`Motorbike turned ${direction}.`); }
-  reverse() { console.log('Motorbike is reversing.'); }
-  wheelie() { console.log('Motorbike is doing a wheelie!'); }
-}
+//   override printDetails() {
+//       super.printDetails();
+//       console.log(`Number of Wheels: ${this.numWheels}`);
+//   }
+// }

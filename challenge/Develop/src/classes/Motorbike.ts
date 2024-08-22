@@ -1,5 +1,5 @@
-import { Vehicle } from './Vehicle';
-import Wheel from './Wheel';
+import Vehicle  from './Vehicle.js';
+import Wheel from './Wheel.js';
 import inquirer from 'inquirer';
 
 class Motorbike extends Vehicle {
@@ -44,6 +44,13 @@ class Motorbike extends Vehicle {
       console.log(`Wheel ${index + 1}: ${wheel.toString()}`);
     });
   }
+  start() { console.log('Motorbike started.'); }
+  accelerate(amount: number) { console.log(`Motorbike accelerated by ${amount} km/h.`); }
+  decelerate(amount: number) { console.log(`Motorbike decelerated by ${amount} km/h.`); }
+  stop() { console.log('Motorbike stopped.'); }
+  turn(direction: string) { console.log(`Motorbike turned ${direction}.`); }
+  reverse() { console.log('Motorbike is reversing.'); }
+  
 }
 
 export default Motorbike;

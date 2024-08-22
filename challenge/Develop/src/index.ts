@@ -1,8 +1,8 @@
 import Truck from "./classes/Truck.js";
-import { Car } from "./classes/Car"; 
+import  Car  from "./classes/Car.js"; 
 import Motorbike from "./classes/Motorbike.js";
 import Wheel from "./classes/Wheel.js";
-import { Cli } from "./classes/Cli";
+import  Cli  from "./classes/Cli.js";
 import inquirer from 'inquirer';
 
 const cli = new Cli();

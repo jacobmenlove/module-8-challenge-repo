@@ -1,10 +1,8 @@
-
-import { Vehicle } from './Vehicle'; 
-import { Car } from './Car'; 
-
-import  Motorbike  from './Motorbike';  
-import  Wheel  from './Wheel'; 
-import AbleToTow  from '../interfaces/AbleToTow'; 
+import  Vehicle from './Vehicle.js'; 
+import  Car  from './Car.js'; 
+import  Motorbike  from './Motorbike.js';  
+import  Wheel  from './Wheel.js'; 
+import AbleToTow  from '../interfaces/AbleToTow.js'; 
 
 
 export class Truck extends Vehicle implements AbleToTow {
@@ -59,6 +57,12 @@ export class Truck extends Vehicle implements AbleToTow {
     console.log(`Towing Capacity: ${this.towingCapacity}`);
     console.log(`Wheels: ${this.wheels.length}`); 
   }
+  start() { console.log('Truck started.'); }
+    accelerate(amount: number) { console.log(`Truck accelerated by ${amount} km/h.`); }
+    decelerate(amount: number) { console.log(`Truck decelerated by ${amount} km/h.`); }
+    stop() { console.log('Truck stopped.'); }
+    turn(direction: string) { console.log(`Truck turned ${direction}.`); }
+    reverse() { console.log('Truck is reversing.'); }
 }
 
 

@@ -1,6 +1,4 @@
-
-import { Vehicle } from './Vehicle'; 
-
+import Vehicle from './Vehicle.js'; 
 import Wheel from './Wheel.js';
 import inquirer from 'inquirer';
 
@@ -25,3 +23,5 @@ export class Car extends Vehicle {
     turn(direction: string) { console.log(`Car turned ${direction}.`); }
     reverse() { console.log('Car is reversing.'); }
 }
+
+export default Car;
