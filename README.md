@@ -23,7 +23,7 @@ npm install
 ## Usage
 Start the application using:
 ```bash
-npm start
+npm run start
 ```
 Follow the interactive prompts to create new vehicles, select existing ones, and perform actions with the selected vehicle. For a detailed demonstration, view the [walkthrough video]https://youtu.be/VVOGcbzSpZQ.
 
